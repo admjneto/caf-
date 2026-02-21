@@ -1,0 +1,180 @@
+:root {
+  --bg: #f6efe8;
+  --surface: #fffaf6;
+  --surface-alt: #efe2d6;
+  --text: #3f2a1e;
+  --muted: #705548;
+  --accent: #8a4f2a;
+  --accent-soft: #c98f63;
+  --radius: 16px;
+  --shadow: 0 12px 28px rgba(63, 42, 30, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.hero {
+  position: relative;
+  min-height: 62vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: #fff;
+  background: url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1600&q=80")
+    center/cover;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom right, rgba(53, 23, 4, 0.78), rgba(21, 10, 2, 0.62));
+}
+
+.hero__content {
+  position: relative;
+  width: min(760px, 90%);
+}
+
+.hero__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.1;
+  margin-bottom: 0.8rem;
+}
+
+.hero__cta {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.3rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.section {
+  padding: 3.5rem 0;
+}
+
+.section--alt {
+  background: var(--surface-alt);
+}
+
+.section__head {
+  max-width: 680px;
+  margin-bottom: 1.4rem;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.4rem;
+}
+
+label {
+  font-weight: 600;
+}
+
+select {
+  padding: 0.55rem 0.8rem;
+  border-radius: 10px;
+  border: 1px solid #cab19f;
+  background: #fff;
+  color: var(--text);
+}
+
+.coffee-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
+}
+
+.coffee-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  border: 1px solid #e5d4c8;
+}
+
+.coffee-card__meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  background: #f2e4d7;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  margin-bottom: 0.8rem;
+}
+
+.coffee-card__title {
+  margin-bottom: 0.55rem;
+}
+
+.coffee-card h4 {
+  margin: 0.8rem 0 0.2rem;
+  font-size: 0.95rem;
+}
+
+.coffee-card__composition {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.how-to {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.footer {
+  text-align: center;
+  padding: 1.2rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+@media (max-width: 640px) {
+  .controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero {
+    min-height: 56vh;
+  }
+}
