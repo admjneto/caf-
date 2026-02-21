@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Café Mundo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <p class="hero__eyebrow">Guia internacional</p>
+        <h1>Explore os cafés do mundo</h1>
+        <p>
+          Descubra origens, história, métodos e composição dos cafés mais populares em
+          diferentes países.
+        </p>
+        <a href="#catalogo" class="hero__cta">Começar exploração</a>
+      </div>
+    </header>
+
+    <main>
+      <section id="catalogo" class="section container">
+        <div class="section__head">
+          <h2>Catálogo de cafés</h2>
+          <p>
+            Filtre por região para conhecer estilos tradicionais e onde encontrá-los no
+            mundo.
+          </p>
+        </div>
+
+        <div class="controls">
+          <label for="region-filter">Região</label>
+          <select id="region-filter" aria-label="Filtrar cafés por região">
+            <option value="todos">Todos</option>
+          </select>
+        </div>
+
+        <div id="coffee-grid" class="coffee-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="section section--alt">
+        <div class="container">
+          <h2>Como usar este guia</h2>
+          <ul class="how-to">
+            <li><strong>1.</strong> Selecione uma região para filtrar os resultados.</li>
+            <li><strong>2.</strong> Abra cada card para ver história e composição.</li>
+            <li><strong>3.</strong> Use “Onde encontrar” para planejar sua próxima degustação.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Café Mundo © 2026 • Uma jornada cultural pelo café.</p>
+    </footer>
+
+    <template id="coffee-card-template">
+      <article class="coffee-card">
+        <div class="coffee-card__meta"></div>
+        <h3 class="coffee-card__title"></h3>
+        <p class="coffee-card__history"></p>
+
+        <h4>Composição</h4>
+        <ul class="coffee-card__composition"></ul>
+
+        <h4>Onde encontrar</h4>
+        <p class="coffee-card__where"></p>
+      </article>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>
